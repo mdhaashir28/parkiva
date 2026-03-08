@@ -1,0 +1,162 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.75rem;
+
+    /* Parkiva — Warm, airy, neighbourly feel */
+    /* Base: warm white / soft cream */
+    --background: 0.98 0.004 80;
+    --foreground: 0.22 0.015 240;
+
+    --card: 1 0 0;
+    --card-foreground: 0.22 0.015 240;
+
+    --popover: 1 0 0;
+    --popover-foreground: 0.22 0.015 240;
+
+    /* Primary: friendly teal */
+    --primary: 0.58 0.12 210;
+    --primary-foreground: 0.99 0 0;
+
+    /* Secondary: soft warm grey surface */
+    --secondary: 0.95 0.006 80;
+    --secondary-foreground: 0.35 0.015 240;
+
+    --muted: 0.94 0.005 80;
+    --muted-foreground: 0.52 0.012 240;
+
+    /* Accent: soft sky-blue hover tint */
+    --accent: 0.93 0.04 210;
+    --accent-foreground: 0.38 0.08 210;
+
+    --destructive: 0.56 0.2 25;
+    --destructive-foreground: 0.99 0 0;
+
+    --border: 0.90 0.008 80;
+    --input: 0.96 0.005 80;
+    --ring: 0.58 0.12 210;
+
+    /* Success: soft sage green */
+    --success: 0.58 0.14 155;
+    --success-foreground: 0.99 0 0;
+
+    /* Warning: warm amber */
+    --warning: 0.72 0.14 60;
+    --warning-foreground: 0.99 0 0;
+
+    --chart-1: 0.58 0.12 210;
+    --chart-2: 0.58 0.14 155;
+    --chart-3: 0.72 0.14 60;
+    --chart-4: 0.56 0.2 25;
+    --chart-5: 0.65 0.12 290;
+
+    --sidebar: 0.97 0.005 80;
+    --sidebar-foreground: 0.22 0.015 240;
+    --sidebar-primary: 0.58 0.12 210;
+    --sidebar-primary-foreground: 0.99 0 0;
+    --sidebar-accent: 0.93 0.04 210;
+    --sidebar-accent-foreground: 0.38 0.08 210;
+    --sidebar-border: 0.90 0.008 80;
+    --sidebar-ring: 0.58 0.12 210;
+  }
+
+  html {
+    color-scheme: light;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Figtree', 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Leaflet popup — light style */
+  .leaflet-container {
+    font-family: inherit !important;
+    background: oklch(0.92 0.01 210) !important;
+  }
+
+  .leaflet-popup-content-wrapper {
+    background: white !important;
+    color: oklch(0.22 0.015 240) !important;
+    border: 1px solid oklch(0.90 0.008 80) !important;
+    border-radius: 12px !important;
+    box-shadow: 0 8px 24px oklch(0.22 0.015 240 / 12%) !important;
+  }
+
+  .leaflet-popup-tip {
+    background: white !important;
+  }
+
+  .leaflet-popup-close-button {
+    color: oklch(0.52 0.012 240) !important;
+    font-size: 18px !important;
+    top: 8px !important;
+    right: 10px !important;
+    font-weight: 300 !important;
+  }
+
+  .leaflet-popup-close-button:hover {
+    color: oklch(0.22 0.015 240) !important;
+  }
+
+  .leaflet-popup-content {
+    margin: 14px 16px !important;
+    color: oklch(0.22 0.015 240) !important;
+  }
+
+  .leaflet-control-zoom a {
+    background-color: white !important;
+    color: oklch(0.35 0.015 240) !important;
+    border-color: oklch(0.90 0.008 80) !important;
+    box-shadow: 0 1px 4px oklch(0 0 0 / 10%) !important;
+  }
+
+  .leaflet-control-zoom a:hover {
+    background-color: oklch(0.95 0.006 80) !important;
+  }
+
+  .leaflet-attribution-flag {
+    display: none !important;
+  }
+
+  .leaflet-control-attribution {
+    background: oklch(1 0 0 / 80%) !important;
+    color: oklch(0.6 0.01 240) !important;
+    font-size: 10px !important;
+  }
+
+  .leaflet-control-attribution a {
+    color: oklch(0.58 0.12 210) !important;
+  }
+
+  /* Available marker gentle pulse */
+  @keyframes markerPulse {
+    0%, 100% { transform: scale(1) rotate(-45deg); }
+    50% { transform: scale(1.12) rotate(-45deg); }
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: oklch(0.96 0.004 80);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: oklch(0.85 0.008 80);
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: oklch(0.75 0.01 80);
+  }
+}
